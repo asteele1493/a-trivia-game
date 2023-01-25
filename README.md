@@ -4,5 +4,6 @@
 
 Collaborators: Vida Powell, Stacy Yu, Andra Steele
 
-![Whiteboard]()
+![Whiteboard](./Lab14_Whiteboard.jpg)
 
+[Project Management](https://trello.com/b/aehIAJhr/lab-14)
