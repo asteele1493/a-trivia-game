@@ -1,0 +1,27 @@
+{
+  "name": "a-trivia-game",
+  "version": "1.0.0",
+  "description": "## Lab 14 - Event Driven Application Implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asteele1493/a-trivia-game.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asteele1493/a-trivia-game/issues"
+  },
+  "homepage": "https://github.com/asteele1493/a-trivia-game#readme",
+  "devDependencies": {
+    "jest": "^29.4.0"
+  },
+  "dependencies": {
+    "prettier": "^2.8.3",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
+  }
+}
