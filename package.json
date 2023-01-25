@@ -4,7 +4,10 @@
   "description": "## Lab 14 - Event Driven Application Implementation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/hub.js",
+    "playerA": "node src/playerA/index.js",
+    "playerB": "node src/playerB/index.js"
   },
   "repository": {
     "type": "git",
