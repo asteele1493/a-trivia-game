@@ -24,8 +24,4 @@ function startPlayerB(){
   });
 }
 
-// function answerQuestion(question){
-//   let answer = prompt()
-// }
-
 startPlayerB();

@@ -4,6 +4,7 @@ const { EVENT_NAMES } = require("./utils");
 const { questionsReady } = require("./questionsQueue/index");
 
 let responseCount = 0;
+let answerCount = 0;
 let question;
 
 function startEventServer() {
@@ -23,14 +24,34 @@ function startEventServer() {
 
     socket.on(EVENT_NAMES.answer, (answer) => {
       console.log(answer);
+      answerCount += 1;
       if (answer.maruQuestion === question.answer) {
-        socket.emit(EVENT_NAMES.answer, 'Correct!');
+        socket.emit(EVENT_NAMES.answer, "Correct!");
       } else {
         console.log(answer.maruQuestion, question.answer);
-        socket.emit(EVENT_NAMES.answer, 'Incorrect!');
+        socket.emit(EVENT_NAMES.answer, "Incorrect!");
       }
-    }
-    );
+      if (answerCount === 2) {
+        question = questionsReady.dequeue();
+        console.log("Here is the question", question.question);
+        io.emit(EVENT_NAMES.questionsReady, question.question);
+      }
+      if (answerCount === 4) {
+        question = questionsReady.dequeue();
+        console.log("Here is the question", question.question);
+        io.emit(EVENT_NAMES.questionsReady, question.question);
+      }
+      if (answerCount === 6) {
+        question = questionsReady.dequeue();
+        console.log("Here is the question", question.question);
+        io.emit(EVENT_NAMES.questionsReady, question.question);
+      }
+      if (answerCount === 8) {
+        question = questionsReady.dequeue();
+        console.log("Here is the question", question.question);
+        io.emit(EVENT_NAMES.questionsReady, question.question);
+      }
+    });
   });
 }
 
